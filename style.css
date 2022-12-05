@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: rgb(222, 221, 221);
+    
+}
+
+.container1{
+    background-image: url(./imagens/cidade-do-rio-de-janeiro.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    /* height: 100vh; */
+    color: white;
+}
+
+.blocoinf{
+   margin: 0 8rem;
+   padding-top: 1.5rem;
+      
+}
+
+.saudacao{
+    letter-spacing: 0.5rem;
+    text-align: center;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
+.hora{
+    font-size:4.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.localizacao{
+    font-size: 18px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.botao{
+    text-align: end;
+}
+
+#mais{ 
+    position: relative;
+    font-size: 8px;   
+    color:  rgb(95, 93, 93);
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    padding: 0.5rem 0.8rem;
+    border-radius: 20px;
+}
