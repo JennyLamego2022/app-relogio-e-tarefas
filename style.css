@@ -7,6 +7,9 @@
 body{
     font-family: 'Josefin Sans', sans-serif;
     background-color: rgb(222, 221, 221);
+    background-image: linear-gradient(180deg, black, white);
+    /* height: 100%; */
+    /* background-repeat: no-repeat; */
     
 }
 
@@ -16,7 +19,7 @@ body{
     background-size: cover;
     position: relative;
     width: 100%;
-    /* height: 100vh; */
+    height: 200px;
     color: white;
 }
 
@@ -49,6 +52,7 @@ body{
 
 .botao{
     text-align: end;
+    margin-bottom: 10px;
 }
 
 #mais{ 
@@ -60,4 +64,27 @@ body{
     text-transform: uppercase;
     padding: 0.5rem 0.8rem;
     border-radius: 20px;
+}
+
+.container2{
+    width: 100%;
+    height: 200px;
+    color: white;
+    /* display: none; */
+}
+
+.titulo{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: start;
+    
+}
+
+.input{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    text-align: end;
+    
 }

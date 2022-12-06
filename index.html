@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https: //fonts.googleapis.com/css2?family= Josefin +Sans:wght@400;700 & família= Josefin+Sans:wght@400;700 &= Permanent+Marker & display=swap" rel="stylesheet">
-
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Lista de Tarefas</title>
 </head>
 <body>
@@ -19,26 +19,50 @@
             <div class="blocoinf">
                 <div class="saudacao">☼ Bom dia</div>
                 <div class="hora">07:00</div>
-                <div class="localizacao">Rio de Janeiro, Br</div><br><br>
+                <div class="localizacao">Rio de Janeiro, Br</div>
                 
             </div>
             <div class="botao"><button id="mais">Mais ˅</button></div>
         </div>
 
         <div class="container2">
-            <div class="fuso">fuso horario atual</div>
+            <div class="titulo" id="fuso">Fuso horário atual</div>
             <div class="input">Rio de Janeiro</div>
-            <div class="dia-ano">dia do ano</div>
+            <div class="titulo" id="dia-ano">Dia do ano</div>
             <div class="input">265</div>
-            <div class="dia-semana">dia da semana</div>
+            <div class="titulo" id="dia-semana">Dia da semana</div>
             <div class="input">5</div>
-            <div class="semanas">numero da semana</div>
+            <div class="titulo" id="semanas">Número da semana</div>
             <div class="input">42</div>
         </div>
     </section>
 
-    <section class="lista">
-        
+    <section class="tarefas">
+        <div class="lista">
+            <div class="header">
+                <p>Lista de Tarefas</p>
+                
+            </div>
+            <hr/>
+            <br/>
+            <div class="divInsert">
+                <button><i class='bx bx-check-circle'></i></button>
+                <input class="textInsert" type="text" placeholder="Digite a tarefa e pressione enter para adicionar" maxlength="20" autofocus>
+                <button><i class='bx bx-x'></i></button> 
+            </div>
+            
+            <div class="tarefas-inseridas" id="tarefasInseridas">
+                <ul></ul>
+            </div>
+
+            <div class="divRdape">
+                
+                <div class="textInsert" type="text" > Tudo   Ativo   Concluido</div>
+                <div class="arraste">Arraste e solte para reordenar a lista</div>
+                
+            </div>
+        </div>
     </section>
+    <script src="./JS/main.js"></script>
 </body>
 </html>
