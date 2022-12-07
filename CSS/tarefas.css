@@ -1,5 +1,192 @@
 *{
     margin: 0;
-    padding: o;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section.tarefas{
+    display: flex;
+    width: 70vw;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 2rem;
+    gap: 15px;
+    color: hsl(233, 11%, 84%);
+    font-size: 2em;
+
+}
+
+.lista{
+ 
+  text-align: center;
+}
+
+.header{
+    display: flex;
+    background-color: hsl(235, 24%, 19%);
+    width: 100%;
+    height: 2.5rem;
+    font-weight: bold;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: hsl(234, 39%, 85%);
+    box-shadow: 0px 0px 5px hsl(234, 39%, 85%);
+
+}
+
+
+.lista{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item{
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    border-radius: 8px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid black;
+
+}
+
+.item > div{
+    width: 80%;
+}
+
+.item:hover{
+    cursor: pointer;
+    transition: all .5 ease;
+    background-color: blue;
+    color: white;
+}
+
+.item > input[type='text']{
+    border: none;
+    width: 80%;
+    font: inherit;
+}
+
+.item > input[type='checkbox']{
+    margin-left: 10px;
+    margin-right: 10px;
+    accent-color: green;
+}
+
+.item > input[type='button']{
+    margin-right: 10px;
+    background-color: red;
+    color: white;
+}
+
+.item > input[type='checkbox'], .item > input[type='button'] {
+    width: 30px;
+    height: 30px;
+    font: inherit;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.item > input[type='checkbox']:checked + div{
+    text-decoration: line-through;
+}
+
+
+.nova-tarefa{
+    display: flex;
+    background-color: hsl(235, 24%, 19%);
+    width: 100%;
+    height: 3rem;
+    border-radius: 8px;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    box-shadow: 0px 0px 5px hsl(234, 39%, 85%);
+    margin: auto;
+    font: inherit;
+    color: hsl(233, 11%, 84%);
+    
+}
+
+.nova-tarefa >input{
+    background-color:  hsl(235, 24%, 19%);
+    border: none;
+    width: 90%;
+    outline: none;
+    font: initial;
+    font-size: 1.1rem;
+    margin-left: 10px;
+    
+}
+#texto{
+    color:  hsl(234, 39%, 85%);
+}
+
+#texto:hover{
+    color: hsl(236, 33%, 92%);
+}
+
+.nova-tarefa >button{
+    background-color:  hsl(235, 24%, 19%);
+    border: none;
+    outline: none;
+    font: initial;
+    font-size: 1.5rem;
+    color: hsl(237, 14%, 26%);
+}
+
+.nova-tarefa >input::placeholder{
+    font-style: italic;
+    font-weight: normal;
+}
+
+
+
+.textInsert{
+    display: flex;
+    background-color: hsl(235, 24%, 19%);
+    width: 100%;
+    height: 2.5rem;
+    font-weight: bold;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: hsl(234, 39%, 85%);
+    box-shadow: 0px 0px 5px hsl(234, 39%, 85%); 
+    font-size: 1rem;
+    word-spacing: 2rem;
+}
+
+.arraste{
+    display: flex;
+    background-color: hsl(235, 24%, 19%);
+    width: 100%;
+    height: 2.5rem;
+    font-weight: bold;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: hsl(234, 39%, 85%);
+    box-shadow: 0px 0px 5px hsl(234, 39%, 85%); 
+    font-size: 0.8rem;
+    letter-spacing: 1px; 
+}
+
+@media only screen and (max-width: 700px) {
+    .item{
+        font-size: 1.5rem;
+    }
     
 }
