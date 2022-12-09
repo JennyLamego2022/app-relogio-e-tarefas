@@ -42,7 +42,7 @@ section.tarefas{
     display: flex;
     width: 100%;
     flex-direction: column;
-    gap: 10px;
+    /* gap: 10px; */
     
 }
 
@@ -54,13 +54,13 @@ section.tarefas{
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 5px;
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.254);
     background-color: hsl(235, 24%, 19%);
-    box-shadow: 0px 0px 5px hsl(234, 39%, 85%);
+    /* box-shadow: 0px 0px 5px hsl(234, 39%, 85%); */
 
 }
 
@@ -80,7 +80,8 @@ section.tarefas{
     border: none;
     width: 80%;
     font: inherit;
-    font-size: 18px;
+    font-size: 15px;
+    
 
 }
 
@@ -149,6 +150,8 @@ section.tarefas{
     margin: auto;
     font: inherit;
     color: hsl(233, 11%, 84%);
+
+    margin-bottom: 30px;
     
 }
 
@@ -175,7 +178,7 @@ section.tarefas{
     border: none;
     outline: none;
     font: initial;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: hsl(237, 14%, 26%);
 }
 
@@ -190,11 +193,13 @@ section.tarefas{
     display: flex;
     justify-content: space-between;
     padding: 0.6rem 0.9rem;
-    font-size: 0.7rem;
+    font-size: 1.2rem;
     color: hsl(237, 14%, 26%);
     background-color: hsl(235, 24%, 19%);
-    box-shadow: 0px 0px 5px hsl(234, 39%, 85%);
-     border-radius: 8px; 
+    /* box-shadow: 0px 0px 5px hsl(234, 39%, 85%); */
+    border-radius: 5px; 
+    border: 1px solid rgba(0, 0, 0, 0.254);
+   
 }
 
 
@@ -209,18 +214,18 @@ section.tarefas{
 }
 
 .textInsert p{
-    /* background-color: hsl(235, 24%, 19%); */
+    
     width: 100%;
     height: 2.5rem;
     font-weight: bold;
-   
     justify-content: center;
     align-items: center;
-    /* margin-top: 20px; */
     color:  hsl(237, 14%, 26%);
-    
-    font-size: 0.7rem;
     padding: 0 5px;
+}
+
+.textInsert p:hover{
+    color:rgb(38, 38, 174);
 }
 
 .arraste{
