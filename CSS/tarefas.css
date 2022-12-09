@@ -85,13 +85,14 @@ section.tarefas{
 }
 
 .listaItem > input[type='checkbox']{
+    /* all:unset; */
     margin-left: 10px;
     margin-right: 10px;
-    accent-color: green;
+    accent-color: green ;
     background-color: transparent;
     color: hsl(233, 11%, 84%);
     border: none;
-      
+         
 }
 
 
@@ -99,7 +100,13 @@ section.tarefas{
     background-color: transparent;
     color: hsl(233, 11%, 84%);
     border: none;
-    border: 50px;
+    /* background-image: url(/imagens/bx-check-circle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 0; */
+    
+    
 }
 
 .listaItem > input[type='button']{
@@ -119,8 +126,8 @@ section.tarefas{
 }
 
 #botao{
-    
-    background-color: red;
+    border-radius: 50px;
+    /* background-color: red; */
     color: red;
 }
 

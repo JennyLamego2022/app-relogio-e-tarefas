@@ -14,7 +14,7 @@ const criarItem = (tarefa, status, indice) => {
     const item = document.createElement('label')
     item.classList.add('listaItem')
     item.innerHTML = `
-    <input type = "checkbox" id="botao" ${status} data-indice = ${indice} >
+    <input type = "checkbox" id="botao"  ${status} data-indice = ${indice} >
     <div> ${tarefa} </div>
     <input type = "button" value = "X" data-indice = ${indice}>
     `
@@ -38,29 +38,28 @@ const limparTarefas = () => {
 const atualizarTela = () => {
     limparTarefas()
     const banco = getBanco()
-    banco.forEach((item,indice) => criarItem (item.tarefa, item.status, item.indice))
+    banco.forEach((item,indice) => criarItem (item.tarefa, item.status, indice))
         
 }
 
 // INSERIR ITEM NA LISTA DE TAREFAS 
 
-const inserirItem = (evento) => {
-    let tecla = evento.key;
 
-    let texto = evento.target.value;
-
-    // if(texto.value===false){
-    //     alert("O campo está vazio, por favor preencha o campo!")
-    // }
-
-    if (tecla === 'Enter') {
+    const inserirItem = (evento) => {
+        let tecla = evento.key;
+        let texto = evento.target.value;
+       
+        
+        if (tecla === 'Enter') {
         const banco = getBanco();
-        banco.push ({'tarefa': texto, 'status': ''});
+
+        banco.push ({'tarefa': texto, 'status': ''})
         setBanco(banco);
         atualizarTela();
         evento.target.value = '';
+        // console.log(tecla)    
+       
     }
-
 }
 
 
@@ -83,18 +82,20 @@ const atualizarItem = (indice) => {
 }
 
 
-const clickItem  = (evento) =>{
-    const elemento = evento.target;
+const clickItem  = (evento) => {
+    const elemento = evento.target
 
     if (elemento.type === 'button') {
-        const indice = elemento.dataset.indice;
-        removerItem (indice);
+        const indice = elemento.dataset.indice
+        removerItem (indice)
 
-    }else
-    if  (elemento.type === 'checkbox'){
-        const indice = elemento.dataset.indice;
-        atualizarItem (indice);
-    } console.log (elemento.type)
+    }else if  (elemento.type === 'checkbox') {
+        const indice = elemento.dataset.indice
+        atualizarItem (indice)
+
+    
+    }
+    console.log (elemento.type)
 }
 
 // adicionar escutadore de eventos de tecla pressionada e de click
@@ -104,21 +105,4 @@ document.getElementById('lista').addEventListener('click', clickItem);
 
 atualizarTela();
 
-
-
-
-
-let pegaInputTexto = document.querySelector('#texto')
-let pegaLista = document.querySelector('.mostra_texto')
-let pegaBotao = document.querySelector('.botao')
-
-pegaBotao.addEventListener('keypress', (event)=>{
-    const keyName = event.key;
-
-   
-        alert('keypress event \ n \ n' + 'chave' + lista);
-   
-
-    
-});
 
