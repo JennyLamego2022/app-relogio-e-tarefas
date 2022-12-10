@@ -14,13 +14,11 @@ const criarItem = (tarefa, status, indice) => {
     const item = document.createElement('label')
     item.classList.add('listaItem')
     item.innerHTML = `
-    <input type = "checkbox" id="botao"  ${status} data-indice = ${indice} >
+    <input type = "checkbox" class="checkbox" id="botao"  ${status} data-indice = ${indice} >
     <div> ${tarefa} </div>
     <input type = "button" value = "X" data-indice = ${indice}>
     `
-    document.getElementById('lista').appendChild(item)
-   
-    
+    document.getElementById('lista').appendChild(item) 
 }
 
 // LIMPAR TAREFAS
@@ -44,24 +42,25 @@ const atualizarTela = () => {
 
 // INSERIR ITEM NA LISTA DE TAREFAS 
 
+const inserirItem = (evento) => {
+    let tecla = evento.key;
+    let texto = evento.target.value;
+   
+    
+    if (tecla === 'Enter') {
+        if (texto == '') {
+            console.log('erro')
+        }else {
 
-    const inserirItem = (evento) => {
-        let tecla = evento.key;
-        let texto = evento.target.value;
-       
-        
-        if (tecla === 'Enter') {
-        const banco = getBanco();
+            const banco = getBanco();
 
-        banco.push ({'tarefa': texto, 'status': ''})
-        setBanco(banco);
-        atualizarTela();
-        evento.target.value = '';
-        // console.log(tecla)    
-       
-    }
+            banco.push ({'tarefa': texto, 'status': ''})
+            setBanco(banco);
+            atualizarTela();
+            evento.target.value = '';
+            // console.log(tecla)    
 }
-
+}}
 
     // REMOVER ITEM
 
@@ -79,6 +78,7 @@ const atualizarItem = (indice) => {
     banco[indice].status = banco[indice].status === '' ? 'checked' : ''
     setBanco(banco)
     atualizarTela()
+    console.log(lista)
 }
 
 
@@ -121,31 +121,19 @@ info.forEach(element => {
        element.classList.add('ativo')
        if(element.innerText=="Ativo"){
         todaLista.forEach(elem => {
-            if(!elem.children[0].children[1].classList.contains("checkbox")){
-               elem.style.display="flex";
-               console.log(indice)
-            }else{
-                elem.style.display="none";
-            }    
-        })
+
+            console.log(evento)
+            // if()){
+                
+
+            // //    elem.style.display="flex";
+            //    console.log(indice)
+            // }else{
+            //     elem.style.display="none";
+            // }    
+        }) 
        }else if(element.innerText=="checkbox"){
 
        }
  })
 }); 
-
-
-
-// console.log(element)
-// if(element.innerText=="Ativo"){
-//     todaLista.forEach(elem => {
-//         console.log(elem.children[1]);
-//     })
-
-// }else if(element.innerText=="Concluído"){
-
-// }else{
-
-// }
-
-

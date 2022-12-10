@@ -51,7 +51,7 @@ section.relogio{
 }
 
 .saudacao{
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.3rem;
     text-align: center;
     font-size: 18px;
     margin-left: auto;
@@ -110,6 +110,7 @@ section.relogio{
     flex-direction: column;
     text-align: start;
     margin-left: 2rem;
+    color: rgb(222, 221, 221);
    
     
 }

@@ -40,7 +40,7 @@ section.tarefas{
 }
 
 
-.lista{
+.listas{
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -63,11 +63,14 @@ section.tarefas{
     border: 1px solid rgba(0, 0, 0, 0.254);
     background-color: hsl(235, 24%, 19%);
     /* box-shadow: 0px 0px 5px hsl(234, 39%, 85%); */
-
+    
 }
+
+
 
 .listaItem > div{
     width: 80%;
+    
     
 }
 
@@ -106,11 +109,11 @@ section.tarefas{
     background-image: url(/imagens/bx-check-circle.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
-   
-    
+    background-size: contain; 
     
 }
+
+
 
 .listaItem > input[type='button']{
     margin-right: 10px;
@@ -126,7 +129,9 @@ section.tarefas{
     font: inherit;
     border: 1px solid black;
     border-radius: 8px;
+    
 }
+
 
 #botao{
     border-radius: 50px;
@@ -137,7 +142,10 @@ section.tarefas{
 
 .listaItem > input[type='checkbox']:checked + div{
     text-decoration: line-through;
+    opacity: 0.5;
+
 }
+
 
 
 .nova-tarefa{
