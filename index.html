@@ -7,10 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="stylesheet" href="./CSS/tarefas.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https: //fonts.googleapis.com/css2?family= Josefin +Sans:wght@400;700 & família= Josefin+Sans:wght@400;700 &= Permanent+Marker & display=swap" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   
     <title>Lista de Tarefas</title>
 </head>
 <body>
@@ -28,13 +25,49 @@
 
         <div class="container2">
             <div class="titulo" id="fuso">Fuso horário atual</div>
-            <div class="input">Rio de Janeiro</div>
+            <div class="input">Rio de Janeiro</div> 
             <div class="titulo" id="dia-ano">Dia do ano</div>
-            <div class="input">265</div>
+            <div class="input">265</div> 
             <div class="titulo" id="dia-semana">Dia da semana</div>
-            <div class="input">5</div>
-            <div class="titulo" id="semanas">Número da semana</div>
+            <div class="input">5</div>   
+            <div class="titulo" id="semanas">Número da semana</div>                    
             <div class="input">42</div>
+        </div>
+    </section>
+
+    <section class="tarefas">
+        <div class="lista">
+            <div class="header">
+                <p id="titulo">Lista de Tarefas</p>
+                
+            </div>
+            <!-- <hr/> -->
+            <br/>
+                       
+            <div class="nova-tarefa" id="novaTarefa">
+                <!-- <button><i class='bx bx-check-circle'></i></button> -->
+                <input id="texto" type="text" placeholder="Digite sua tarefa" maxlength="66" autofocus>
+                <!-- <button class="botao"><i class='bx bxs-plus-circle'></i></button>  -->
+                <!-- <box-icon type='solid' name='plus-circle'></box-icon> -->
+                <h3 class="mostra_texto"></h3>
+            </div>
+    
+            <div class="lista" id="lista">
+    
+            </div>
+            
+            <div class="info">
+                <p>5 itens restantes</p>
+                <div class="textInsert" > 
+                    <p class="ativo" id="ativo">Tudo</p>
+                    <p>Ativo</p>
+                    <p>Concluido</p>
+                </div>    
+
+                <p id="apagar">Apagar Tudo</p>
+                    
+                
+            </div>
         </div>
     </section>
 

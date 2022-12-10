@@ -106,3 +106,46 @@ document.getElementById('lista').addEventListener('click', clickItem);
 atualizarTela();
 
 
+let info = document.querySelectorAll(".textInsert p")
+let todaLista = document.querySelectorAll('.lista')
+let ativo = document.querySelector(".ativo")
+// console.log(lista)
+
+console.log(info);
+info.forEach(element => {
+ element.addEventListener('click', () =>{
+    info.forEach(item => {
+        item.classList.remove('ativo');
+        
+       });
+       element.classList.add('ativo')
+       if(element.innerText=="Ativo"){
+        todaLista.forEach(elem => {
+            if(!elem.children[0].children[1].classList.contains("checkbox")){
+               elem.style.display="flex";
+               console.log(indice)
+            }else{
+                elem.style.display="none";
+            }    
+        })
+       }else if(element.innerText=="checkbox"){
+
+       }
+ })
+}); 
+
+
+
+// console.log(element)
+// if(element.innerText=="Ativo"){
+//     todaLista.forEach(elem => {
+//         console.log(elem.children[1]);
+//     })
+
+// }else if(element.innerText=="Concluído"){
+
+// }else{
+
+// }
+
+
