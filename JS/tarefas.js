@@ -38,22 +38,24 @@ function deletarTarefa(id){
 
 }
 
-function tarefaFeita(id){
-    var item = document.getElementById(id)
-    var classe = item.getAttribute('class')
+//EXTRA FILTROS
 
-    if(classe == "item"){
-        item.classList.add('clicado')
-        var icone = document.getElementById('icone' + id)
-        icone.classList.remove('bx bxs-plus-circle')
-        icone.classList.add("mdi-check-circle")
+// function tarefaFeita(id){
+//     var item = document.getElementById(id)
+//     var classe = item.getAttribute('class')
+
+//     if(classe == "item"){
+//         item.classList.add('clicado')
+//         var icone = document.getElementById('icone' + id)
+//         icone.classList.remove('bx bxs-plus-circle')
+//         icone.classList.add("mdi-check-circle")
         
-    }else{
-        item.classList.remove('clicado')
+//     }else{
+//         item.classList.remove('clicado')
 
-        var icone = document.getElementById('icone' + id)
-        icone.classList.remove("mdi-check-circle")
-        icone.classList.add('bx bxs-plus-circle')
-    }
+//         var icone = document.getElementById('icone' + id)
+//         icone.classList.remove("mdi-check-circle")
+//         icone.classList.add('bx bxs-plus-circle')
+//     }
 
-}
+// }

@@ -106,8 +106,6 @@ function displayResults(weather) {
     temp_number.innerHTML = temperature;
     temp_unit.innerHTML = `°c`;
 
-    // weather_tempo = weather.weather[0].description;
-    // weather_t.innerText = capitalizeFirstLetter(weather_tempo)
     weather_t.innerText = weather.weather[0].description;
 
     low_high.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
@@ -145,15 +143,7 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-
-// const relogio = () => {
-//     const hora = document.querySelector('.hora');
-//     const url =  "http://worldtimeapi.org/api/ip/:ipv4";
-//     fetch(url).then(console.log)
-//     // console.log(hora);
-
-// }
-
+//Relogio
 
 const hora = document.querySelector('.hora');
 
