@@ -19,17 +19,30 @@
                 <div class="hora">07:00</div>
                 <div class="localizacao">Rio de Janeiro, Br</div>
                 
+                <div class="card-footer bg-white">
+                    <div class="input-group ">
+                      <input type="text" class="form-control bg-light" placeholder="digite o nome da cidade" aria-label="Recipient's username" aria-describedby="button-addon2">
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-warning text-dark" type="button" id="button-addon2">
+                          <i class="fas fa-search"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="data">Domingo, 4 Dezembro 2022</div>
+                
             </div>
             <div class="botao"><button id="mais">Mais ˅</button></div>
         </div>
 
         <div class="container2">
-            <div class="titulo" id="fuso">Fuso horário atual</div>
-            <div class="input">Rio de Janeiro</div> 
-            <div class="titulo" id="dia-ano">Dia do ano</div>
-            <div class="input">265</div> 
-            <div class="titulo" id="dia-semana">Dia da semana</div>
-            <div class="input">5</div>   
+            <div class="titulo" id="fuso">Tempo</div>
+            <div class="input" id="tempo">Sol</div> 
+            <div class="titulo" >Temperatura</div>
+            <div class="input" id="temperatura">265</div> 
+            <div class="titulo" id="dia-semana">min_max</div>
+            <div class="input" id="min_max">5</div>   
             <div class="titulo" id="semanas">Número da semana</div>                    
             <div class="input">42</div>
         </div>
@@ -65,42 +78,13 @@
                 </div>    
 
                 <p id="apagar">Apagar Tudo</p>
-                    
-                
+                                    
             </div>
         </div>
     </section>
 
-    <!-- <section class="tarefas">
-        <div class="lista">
-            <div class="header">
-                <p>Lista de Tarefas</p>
-                
-            </div>
-            <hr/>
-            <br/>
-            <div class="divInsert">
-                <button><i class='bx bx-check-circle'></i></button>
-                <input class="textInsert" type="text" placeholder="Digite a tarefa e pressione enter para adicionar" maxlength="20" autofocus>
-                <button><i class='bx bx-x'></i></button> 
-            </div>
-            
-            <div class="nova-tarefa" id="novaTarefa">
-                <input type="text" placeholder="Digite sua tarefa" maxlength="20" autofocus>
-            </div>
-
-            <div class="lista" id="lista">
-
-            </div>
-
-            <div class="divRdape">
-                
-                <div class="textInsert" type="text" > Tudo   Ativo   Concluido</div>
-                <div class="arraste">Arraste e solte para reordenar a lista</div>
-                
-            </div>
-        </div>
-    </section> -->
+ 
     <script src="./JS/main.js"></script>
+    <script src="./JS/api.js"></script>
 </body>
 </html>

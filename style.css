@@ -70,6 +70,15 @@ section.relogio{
     text-align: center;
     margin-top: 1rem;
 }
+.card-footer bg-white{
+    display: flex;
+    flex-direction: in;
+}
+
+#button-addon2{
+    width: 10px;
+    height: 10px;
+}
 
 .botao{
     text-align: end;
