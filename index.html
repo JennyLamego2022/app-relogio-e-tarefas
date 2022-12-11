@@ -10,18 +10,27 @@
    
     <title>Lista de Tarefas</title>
 </head>
-<body>
+<body onload="time()" >
+    
+        <div class="hora">07:00</div>
+    
 
     <section class="relogio">
         <div class="container1">
             <div class="blocoinf">
+                <div class="container-img">
+                    <img src="./imagens/icons/unknown.png">
+                </div>
                 <div class="saudacao">☼ Bom dia</div>
-                <div class="hora">07:00</div>
-                <div class="localizacao">Rio de Janeiro, Br</div>
+                
+               
+                
+                <div class="city">Rio de Janeiro, Br</div>
+                <div class="date">Terça, 1 Dezembro 2022</div>
                 
                 <div class="card-footer bg-white">
                     <div class="input-group ">
-                      <input type="text" class="form-control bg-light" placeholder="digite o nome da cidade" aria-label="Recipient's username" aria-describedby="button-addon2">
+                      <input type="text" class="form-control bg-light" placeholder="Escolha outra cidade" aria-label="Recipient's username" aria-describedby="button-addon2">
                       <div class="input-group-append">
                         <button class="btn btn-outline-warning text-dark" type="button" id="button-addon2">
                           <i class="fas fa-search"></i>
@@ -38,13 +47,18 @@
 
         <div class="container2">
             <div class="titulo" id="fuso">Tempo</div>
-            <div class="input" id="tempo">Sol</div> 
+            <div class="input" id="weather">Sol</div> 
             <div class="titulo" >Temperatura</div>
-            <div class="input" id="temperatura">265</div> 
-            <div class="titulo" id="dia-semana">min_max</div>
-            <div class="input" id="min_max">5</div>   
-            <div class="titulo" id="semanas">Número da semana</div>                    
-            <div class="input">42</div>
+            <div class="container-temp mx-4 my-3">
+                <div>22</div>
+                <span>°c</span>
+              </div>
+      
+            <!-- <div class="input" id="temperatura">22 <span>°C</span></div>  -->
+            <div class="titulo" id="dia-semana">Min_Max</div>
+            <div class="input" id="low-high">22°C / 23°C</div>   
+            <!-- <div class="titulo" id="semanas">Número da semana</div>                    
+            <div class="input">42</div> -->
         </div>
     </section>
 

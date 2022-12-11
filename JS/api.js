@@ -1,33 +1,59 @@
-// 'use strict'
-
 const api = {
     key: "12671e3e633723331455b685b8124d02",
-    base: `https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}`,
-    lang: "pt-br",
-    units: "metrice"
+    base: "https://api.openweathermap.org/data/2.5/",
+    lang: "pt_br",
+    units: "metric"
 } 
 
-// const pesquisaCity = async () => {
-//     const cidade = document.querySelector(".localizacao").value;
-//     const url = `http://api.openweathermap.org/data/2.5/`;
-//     const dados = await fetch(url);
-//     const local = await dados.json();
-    
-//     console.log(local)
-// }
 
-
-
-const city = document.querySelector(".localizacao");
-const data = document.querySelector('.data');
-// const container_img = document.querySelector('.container-img');
-const container_temp = document.querySelector('#temperatura');
-// const temp_number = document.querySelector('.container-temp div');
-// const temp_unit = document.querySelector('.container-temp span');
-const tempo = document.querySelector('#tempo');
+const city = document.querySelector(".city");
+const date = document.querySelector('.date');
+const container_img = document.querySelector('.container-img');
+const container_temp = document.querySelector('.container-temp');
+const temp_number = document.querySelector('.container-temp div');
+const temp_unit = document.querySelector('.container-temp span');
+const weather_t = document.querySelector('#weather');
 const search_input = document.querySelector('.form-control');
 const search_button = document.querySelector('.btn');
-const min_max = document.querySelector('#min_max');
+const low_high = document.querySelector('#low-high');
+
+
+//Geolocalização
+
+window.addEventListener('load', () => {
+    //if ("geolocation" in navigator)
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(setPosition, showError);
+    }
+    else {
+        alert('navegador não suporta geolozalicação');
+    }
+    function setPosition(position) {
+        console.log(position)
+        let lat = position.coords.latitude;
+        let long = position.coords.longitude;
+        coordResults(lat, long);
+    }
+    function showError(error) {
+        alert(`erro: ${error.message}`);
+    }
+})
+
+function coordResults(lat, long) {
+    fetch(`${api.base}weather?lat=${lat}&lon=${long}&lang=${api.lang}&units=${api.units}&APPID=${api.key}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`http error: status ${response.status}`)
+            }
+            return response.json();
+        })
+        .catch(error => {
+            alert(error.message)
+        })
+        .then(response => {
+            displayResults(response)
+        });
+}
 
 
 //adiciona com click
@@ -74,21 +100,22 @@ function displayResults(weather) {
     date.innerText = dateBuilder(now);
 
     let iconName = weather.weather[0].icon;
-    container_img.innerHTML = `<img src="./icons/${iconName}.png">`;
+    container_img.innerHTML = `<img src="./imagens/icons/${iconName}.png">`;
 
     let temperature = `${Math.round(weather.main.temp)}`
     temp_number.innerHTML = temperature;
     temp_unit.innerHTML = `°c`;
 
-    weather_tempo = weather.weather[0].description;
-    weather_t.innerText = capitalizeFirstLetter(weather_tempo)
+    // weather_tempo = weather.weather[0].description;
+    // weather_t.innerText = capitalizeFirstLetter(weather_tempo)
+    weather_t.innerText = weather.weather[0].description;
 
     low_high.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
 }
 
 function dateBuilder(d) {
     let days = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
-    let months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julio", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+    let months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
     let day = days[d.getDay()]; //getDay: 0-6
     let date = d.getDate();
@@ -119,11 +146,22 @@ function capitalizeFirstLetter(string) {
 }
 
 
-// const localzacao = (fusoHorario) => {
-//     document.getElementById('fuso').value = fusoHorario.
+// const relogio = () => {
+//     const hora = document.querySelector('.hora');
+//     const url =  "http://worldtimeapi.org/api/ip/:ipv4";
+//     fetch(url).then(console.log)
+//     // console.log(hora);
+
 // }
 
 
-// const url = `https://api.bigdatacloud.net/data/timezone-by-ip`
+const hora = document.querySelector('.hora');
 
-// console.log(url);
+function time() {
+    today=new Date();
+    h=today.getHours();
+    m=today.getMinutes();
+    s=today.getSeconds();
+    document.querySelector('.hora').innerHTML=h+":"+m+":"+s;
+    setTimeout('time()',500);
+}
