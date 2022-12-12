@@ -61,7 +61,8 @@ section.tarefas{
 }
 
 .listaItem > div{
-    width: 80%;  
+    width: 80%; 
+    font-size: 1.2rem; 
     
 }
 
