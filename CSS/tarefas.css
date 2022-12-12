@@ -31,7 +31,7 @@ section.tarefas{
     border-radius: 8px;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     color: hsl(235, 24%, 19%);
     /* box-shadow: 0px 0px 5px hsl(234, 39%, 85%); */
 }

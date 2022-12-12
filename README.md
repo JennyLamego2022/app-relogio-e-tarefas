@@ -14,7 +14,7 @@ O objetivo do projeto é que o usuário da lista de tarefas tenha uma orientaç�
 <br>
 
 <div align="center">
-<img src = "https://user-images.githubusercontent.com/97410860/205438361-9403e596-775a-40e5-9ed8-95cdf505a501.jpg" width = "300px"/>
+<img src = "https://user-images.githubusercontent.com/97410860/206951177-f94ec9fb-d4b2-4583-b48b-11979cd73657.jpg" width = "350px"/>
 </div>
 
 <br>
@@ -23,7 +23,7 @@ O objetivo do projeto é que o usuário da lista de tarefas tenha uma orientaç�
 
 ## 🚀 Link do projeto para visualização no navegador
 
-https://
+Deploy:  https://jennylamego2022.github.io/app-relogio-e-tarefas/
 
 
 ### 📋 Pré-requisitos
