@@ -16,16 +16,9 @@ body{
     background-attachment: fixed;
     background-image: linear-gradient(180deg, hsl(235, 21%, 11%), white);
     height: auto;
-    
-    /* background-repeat: no-repeat; */
-    
+      
 }
 
-/* section.relogio{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-} */
 
 section.relogio{
     display: flex;
@@ -43,9 +36,34 @@ section.relogio{
       
 }
 
+.container-img{
+    display: flex;
+    width: 50%;
+}
+img{
+    display: flex;
+    color: white;
+    width: 35px;
+    height: 35px;
+    
+}
+
+.hora{
+    display: flex;
+    position: absolute;
+    font-size:2rem;
+    font-weight: 700;
+    text-align: center;
+    align-items: center;
+    padding: 0;
+    margin-left: 8rem;
+    margin-right: auto;    
+}
 
 .blocoinf{
-   margin: 0 8rem;
+    display: flex;
+    flex-direction: column;
+   margin: 0 2rem;
    padding-top: 1.5rem;
       
 }
@@ -59,18 +77,22 @@ section.relogio{
     margin-bottom: 1rem;
 }
 
-img{
-    color: white;
-    width: 30px;
-    height: 30px;
+.city{
+    margin-top: 40px;
 }
 
-.hora{
-    display: flex;
-    position: absolute;
-    font-size:4.5rem;
-    font-weight: 700;
-    text-align: center;
+.date{
+    font-size: 0.7rem;
+    margin-bottom: 10px;    
+}
+
+.input-group{
+    display: flex;    
+}
+
+.iform-control bg-light{
+    border: none;
+    border-radius: 8px;
 }
 
 .localizacao{
@@ -80,12 +102,13 @@ img{
 }
 .card-footer bg-white{
     display: flex;
-    flex-direction: in;
+    /* flex-direction: in; */
 }
 
 #button-addon2{
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
 }
 
 .botao{
@@ -113,8 +136,7 @@ img{
     height: 150px;
     color: white;
     margin-top: 2rem;
-     
-    /* display: none; */
+    display: none;
 }
 
 .container2.esconder{
@@ -127,9 +149,7 @@ img{
     flex-direction: column;
     text-align: start;
     margin-left: 2rem;
-    color: rgb(222, 221, 221);
-   
-    
+    color: rgb(222, 221, 221);    
 }
 
 .input{
@@ -137,8 +157,30 @@ img{
     align-items: flex-end;
     flex-direction: column;
     text-align: end;
-    margin-right: 4rem;
-    
+    margin-right: 4rem;    
 }
 
 
+.container-temp{
+    display:inline-flex;
+    align-items: flex-end;
+    flex-direction: row;
+    text-align: end;
+    margin-right: 4rem; 
+    padding-left: 8rem;
+}
+
+.container-temp div{
+    display: flex;
+    flex-direction: row;
+    color: rgba(28, 28, 238, 0.818);
+    font-size: 2rem;
+   
+}
+
+.container-temp span{
+    display: flex;
+    flex-direction: row;
+    color: rgba(28, 28, 238, 0.818);
+    font-size: 2rem;
+}
