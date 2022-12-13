@@ -140,7 +140,7 @@ img{
     height: 100px;
     color: white;
     margin-top: 2rem;
-    /* display: none; */
+    display: none;
     cursor: pointer;
 }
 
