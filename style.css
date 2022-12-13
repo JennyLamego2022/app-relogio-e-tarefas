@@ -53,8 +53,8 @@ img{
     position: absolute;
     font-size:2rem;
     font-weight: 700;
-    text-align: center;
-    align-items: center;
+    text-align: end;
+    align-items: flex-end;
     padding: 0;
     margin-left: 8rem;
     margin-right: auto;    
@@ -116,6 +116,8 @@ img{
     text-align: end;
     margin-right: 2rem;
     margin-bottom: 10px;
+   
+
 }
 
 #mais{ 
@@ -127,6 +129,7 @@ img{
     text-transform: uppercase;
     padding: 0.5rem 0.8rem;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .container2{
@@ -169,7 +172,7 @@ img{
     flex-direction: row;
     text-align: end;
     margin-right: 4rem; 
-    padding-left: 8rem;
+    padding-left: 5rem;
 }
 
 .container-temp div{
@@ -187,16 +190,16 @@ img{
     font-size: 2rem;
 }
 
-@media only screen and (min-width: 450px) {
+@media only screen and (min-width: 500px) {
 
     .container1{
     
-        background-image: url(./imagens/cidade-do-rio-de-janeiro.jpg);
+        background-image: url(./imagens/cidade-do-rio-de-janeiro\ -2.jpg); 
         /* background-repeat: no-repeat; */
         background-size:cover;
-        position: relative;
+        /* position: relative; */
         width: 100%;
-        height: 400px;
+        height: 300px;
        
         
           
@@ -204,6 +207,22 @@ img{
     .container-img{
         display: flex;
         justify-items: flex-end;
+    }
+
+    .hora{
+        
+        text-align: start;
+        align-items: flex-start;
+        padding: 0;
+        margin-left: 50px;
+        margin-right: auto;   
+        margin-top: 10px; 
+    }
+
+    .container-temp{
+      
+       
+     
     }
    
 }

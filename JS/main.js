@@ -137,3 +137,16 @@ info.forEach(element => {
        }
  })
 }); 
+
+
+(function() {
+    var click = document.querySelector('#mais');
+    click.addEventListener("click", function(){
+        var container2 = document.querySelector(".container2");
+        if(container2.style.display === "none")
+            container2.style.display = "grid";
+        else{
+            container2.style.display = "none";
+        }
+    })
+})();
