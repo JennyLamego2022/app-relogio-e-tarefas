@@ -113,6 +113,11 @@ function displayResults(weather) {
     var container1 = document.querySelector(".container1");
     container1.style.backgroundImage = `url('https://source.unsplash.com/1920x1080/?"+ ${weather.name} +"')`;
     console.log(weather.name)
+
+    // var hora = document.querySelector('.hora');
+    // hora.innerHTML = ` curl(http://worldtimeapi.org/api/?"+ ${weather.name} +"')`;
+    // console.log(hora)
+
     
 }
 
@@ -155,10 +160,27 @@ function capitalizeFirstLetter(string) {
 const hora = document.querySelector('.hora');
 
 function time() {
+
+    // function pad(s) {
+    //     return (s <10) ? '0' + s : s;
+    // }
     today=new Date();
     h=today.getHours();
     m=today.getMinutes();
     s=today.getSeconds();
-    document.querySelector('.hora').innerHTML=h+":"+m+":"+s;
+    document.querySelector('.hora').innerHTML =`${h < 10 ? '0'+h : h}:${m < 10 ? '0'+m : m}:${s < 10 ? '0'+s : s}`
     setTimeout('time()',500);
 }
+
+
+
+// const hora = document.querySelector('.hora');
+// function time() {
+//     function pad(s) {
+//         return (s < 10) ? '0' + s : s;
+//     }
+//     var date = new Date();
+//     return [date.getHours(), date.getMinutes()].map(pad).join(':');
+//     document.querySelector('.hora').innerHTML=h+":"+m+":"+s;
+//      setTimeout('time()',500);
+// }
