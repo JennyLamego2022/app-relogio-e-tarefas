@@ -26,13 +26,15 @@ section.relogio{
 }
 .container1{
     
-    background-image: url(./imagens/cidade-do-rio-de-janeiro.jpg);
+    /* background-image: url(./imagens/cidade-do-rio-de-janeiro.jpg); */
+    background-image: url('https://source.unsplash.com/1920x1080/?riodejaneiro');
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     width: 100%;
     height: 200px;
     color: white;
+    
       
 }
 
@@ -65,7 +67,7 @@ img{
     flex-direction: column;
    margin: 0 2rem;
    padding-top: 1.5rem;
-      
+   font-size: 1.5rem;
 }
 
 .saudacao{
@@ -82,7 +84,7 @@ img{
 }
 
 .date{
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     margin-bottom: 10px;    
 }
 
@@ -92,7 +94,7 @@ img{
 
 .iform-control bg-light{
     border: none;
-    border-radius: 8px;
+    border-radius: 8px;    
 }
 
 .localizacao{
@@ -100,9 +102,9 @@ img{
     text-align: center;
     margin-top: 1rem;
 }
+
 .card-footer bg-white{
-    display: flex;
-    /* flex-direction: in; */
+    display: flex;   
 }
 
 #button-addon2{
@@ -115,9 +117,7 @@ img{
 .botao{
     text-align: end;
     margin-right: 2rem;
-    margin-bottom: 10px;
-   
-
+    margin-bottom: 10px; 
 }
 
 #mais{ 
@@ -130,6 +130,9 @@ img{
     padding: 0.5rem 0.8rem;
     border-radius: 20px;
     cursor: pointer;
+    border-radius: 10px;
+    border:none;
+    box-shadow: 5px 5px 8px grey;
 }
 
 .container2{
@@ -193,24 +196,44 @@ img{
 @media only screen and (min-width: 500px) {
 
     .container1{
-    
-        background-image: url(./imagens/cidade-do-rio-de-janeiro\ -2.jpg); 
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+        gap: 20px;
+        /* background-image: url(./imagens/cidade-do-rio-de-janeiro\ -2.jpg);  */
         /* background-repeat: no-repeat; */
         background-size:cover;
-        /* position: relative; */
         width: 100%;
         height: 300px;
-       
-        
+           
           
     }
+
+    .blocoinf{
+       display: flex;
+       flex-direction: column;
+       border-radius: 10px;
+       margin-top: 50px;
+       background-color: rgba(64, 59, 206, 0.367);
+       padding: 10px;
+          
+    }
+
+    #mais{
+       margin-left: 35px;
+       border-radius: 10px;
+       border:none;
+       box-shadow: 5px 5px 8px grey;
+    }
+
+
     .container-img{
         display: flex;
         justify-items: flex-end;
     }
 
-    .hora{
-        
+    .hora{        
         text-align: start;
         align-items: flex-start;
         padding: 0;
@@ -218,15 +241,4 @@ img{
         margin-right: auto;   
         margin-top: 10px; 
     }
-
-    .container-temp{
-      
-       
-     
-    }
-   
-}
-
-@media only screen and (min-width: 450px) {
-
 }

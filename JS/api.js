@@ -109,7 +109,14 @@ function displayResults(weather) {
     weather_t.innerText = weather.weather[0].description;
 
     low_high.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
+
+    var container1 = document.querySelector(".container1");
+    container1.style.backgroundImage = `url('https://source.unsplash.com/1920x1080/?"+ ${weather.name} +"')`;
+    console.log(weather.name)
+    
 }
+
+
 
 function dateBuilder(d) {
     let days = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
